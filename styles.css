@@ -1,0 +1,157 @@
+/* ===================================================================
+   Sky Loft São Paulo — styles
+   Palette: deep charcoal + warm champagne gold, elegant serif headings
+   =================================================================== */
+:root{
+  --bg:#0e0f12;
+  --bg-alt:#16181d;
+  --surface:#1d2026;
+  --ink:#f4f1ea;
+  --muted:#b7b2a8;
+  --gold:#c9a86a;
+  --gold-soft:#e3cf9f;
+  --line:rgba(201,168,106,.25);
+  --maxw:1160px;
+  --radius:14px;
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;font-weight:300;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;letter-spacing:.3px}
+h1{font-size:clamp(2.6rem,6vw,4.4rem)}
+h2{font-size:clamp(1.9rem,3.5vw,2.8rem)}
+h3{font-size:1.4rem}
+.eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;font-weight:500;color:var(--gold);margin-bottom:.8rem}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-block;font-family:var(--sans);font-size:.85rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.85rem 1.7rem;border-radius:50px;transition:.25s ease;cursor:pointer;border:1px solid transparent}
+.btn-gold{background:var(--gold);color:#16140f}
+.btn-gold:hover{background:var(--gold-soft)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-outline{border-color:var(--gold);color:var(--gold)}
+.btn-outline:hover{background:var(--gold);color:#16140f}
+.btn-lg{padding:1.05rem 2.3rem;font-size:.95rem}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(14,15,18,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1.5rem}
+.brand{display:flex;flex-direction:column;line-height:1}
+.brand-name{font-family:var(--serif);font-size:1.5rem;font-weight:700;letter-spacing:.5px}
+.brand-sub{font-size:.66rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-top:2px}
+.main-nav{display:flex;gap:1.7rem;margin-left:auto}
+.main-nav a{font-size:.86rem;color:var(--muted);transition:color .2s}
+.main-nav a:hover{color:var(--ink)}
+.nav-actions{display:flex;align-items:center;gap:1rem}
+.lang-switch{font-size:.78rem;font-weight:600;letter-spacing:.1em;color:var(--gold);border:1px solid var(--line);border-radius:50px;padding:.35rem .7rem}
+.lang-switch:hover{background:var(--gold);color:#16140f}
+.nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
+.nav-toggle span{width:24px;height:2px;background:var(--ink);transition:.3s}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,14,.55) 0%,rgba(10,11,14,.35) 40%,rgba(10,11,14,.8) 100%)}
+.hero-content{position:relative;max-width:760px}
+.hero h1{margin:.2rem 0 1rem}
+.lede{font-size:clamp(1.05rem,1.8vw,1.35rem);color:#ece8df;max-width:34ch;margin-bottom:2rem;font-weight:300}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ---------- Sections ---------- */
+.section{padding:clamp(4rem,8vw,7rem) 0}
+.section-alt{background:var(--bg-alt)}
+.section-head{text-align:center;max-width:680px;margin:0 auto 3rem}
+.section-intro{color:var(--muted);font-size:1.05rem;margin-top:.6rem}
+.subhead{text-align:center;margin:3.5rem 0 2rem;color:var(--gold-soft)}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.col-text p{color:var(--muted);margin-bottom:1.1rem}
+.col-text h2{color:var(--ink);margin-bottom:1.2rem}
+.col-media img{border-radius:var(--radius);width:100%;height:100%;max-height:560px;object-fit:cover}
+.feature-list{list-style:none;display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+.feature-list li{font-size:.82rem;letter-spacing:.05em;color:var(--gold);border:1px solid var(--line);border-radius:50px;padding:.5rem 1.1rem}
+
+/* ---------- Rooms ---------- */
+.rooms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem}
+.room-card{background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.05);transition:transform .3s,border-color .3s}
+.room-card:hover{transform:translateY(-5px);border-color:var(--line)}
+.room-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.room-body{padding:1.5rem}
+.room-body h3{margin-bottom:.4rem}
+.room-meta{color:var(--gold);font-size:.8rem;letter-spacing:.05em;margin-bottom:.8rem}
+.room-body p{color:var(--muted);font-size:.95rem;margin-bottom:1.2rem}
+.rooms-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:2.5rem;font-style:italic}
+
+/* ---------- Attractions / dining ---------- */
+.attractions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.6rem}
+.attraction{background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.05)}
+.attraction img{aspect-ratio:16/10;object-fit:cover;width:100%}
+.attraction h4{font-family:var(--serif);font-size:1.2rem;margin:1rem 1.2rem .3rem}
+.attraction p{color:var(--muted);font-size:.9rem;margin:0 1.2rem .7rem}
+.distance{display:inline-block;font-size:.78rem;color:var(--gold);letter-spacing:.05em}
+.attraction .distance{margin:0 1.2rem 1.2rem}
+.dining-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.dining{background:var(--surface);border:1px solid rgba(255,255,255,.05);border-left:3px solid var(--gold);border-radius:10px;padding:1.3rem}
+.dining h4{font-family:var(--serif);font-size:1.15rem;margin-bottom:.3rem}
+.dining p{color:var(--muted);font-size:.88rem;margin-bottom:.6rem}
+
+/* ---------- Gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gallery-grid img{aspect-ratio:3/4;object-fit:cover;width:100%;border-radius:10px;transition:opacity .3s}
+.gallery-grid img:hover{opacity:.88}
+
+/* ---------- Testimonials ---------- */
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.8rem}
+.testimonial{background:var(--surface);border-radius:var(--radius);padding:2rem;border:1px solid rgba(255,255,255,.05)}
+.testimonial p{color:var(--ink);font-style:italic;font-size:1.02rem;margin-bottom:1.3rem}
+.testimonial footer{display:flex;flex-direction:column}
+.t-name{font-weight:500;color:var(--gold-soft)}
+.t-city{font-size:.82rem;color:var(--muted)}
+
+/* ---------- Booking ---------- */
+.section-booking{background:linear-gradient(135deg,#16181d,#1d2026)}
+.booking-box{max-width:760px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(1.5rem,4vw,3rem);text-align:center}
+.booking-lead{color:var(--muted);margin-bottom:1.6rem;font-size:1.05rem;max-width:48ch;margin-left:auto;margin-right:auto}
+.booking-alt{color:var(--muted);font-size:.9rem;margin-top:1.3rem}
+.booking-alt a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.booking-alt a:hover{color:var(--gold-soft)}
+
+/* ---------- Contact ---------- */
+.contact-list dt{color:var(--gold);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;margin-top:1.2rem}
+.contact-list dd{color:var(--muted);margin-top:.25rem}
+.contact-list a:hover{color:var(--ink)}
+
+/* ---------- Footer ---------- */
+.site-footer{background:#0a0b0d;padding-top:3.5rem;border-top:1px solid rgba(255,255,255,.06)}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr;gap:2rem;padding-bottom:2.5rem}
+.footer-brand .brand-name{font-family:var(--serif);font-size:1.4rem}
+.footer-brand p{color:var(--muted);font-size:.92rem;margin-top:.7rem;max-width:36ch}
+.footer-nav{display:flex;flex-direction:column;gap:.6rem}
+.footer-nav a,.footer-social a{color:var(--muted);font-size:.9rem}
+.footer-nav a:hover,.footer-social a:hover{color:var(--gold)}
+.footer-social{display:flex;flex-direction:column;gap:.6rem}
+.footer-social span{color:var(--gold);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.4rem 24px;text-align:center}
+.footer-bottom p{color:var(--muted);font-size:.82rem}
+
+/* ---------- Responsive ---------- */
+@media (max-width:860px){
+  .main-nav{position:fixed;inset:72px 0 auto 0;background:var(--bg-alt);flex-direction:column;gap:0;padding:0;margin:0;max-height:0;overflow:hidden;transition:max-height .35s ease;border-bottom:1px solid var(--line)}
+  .main-nav.open{max-height:340px}
+  .main-nav a{padding:1rem 24px;border-top:1px solid rgba(255,255,255,.05);width:100%}
+  .nav-toggle{display:flex}
+  .nav-toggle.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle.open span:nth-child(2){opacity:0}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .two-col{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:1.8rem}
+}
+@media (max-width:540px){
+  .hero{min-height:78vh}
+  .main-nav .btn-gold{display:none}
+}
