@@ -81,6 +81,9 @@ h3{font-size:1.4rem}
 .room-card{background:var(--surface);border-radius:var(--radius);overflow:hidden;border:1px solid rgba(255,255,255,.05);transition:transform .3s,border-color .3s}
 .room-card:hover{transform:translateY(-5px);border-color:var(--line)}
 .room-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.room-photo-placeholder{aspect-ratio:4/3;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;text-align:center;padding:1rem;background:linear-gradient(135deg,#20242c 0%,#2c323d 100%);border-bottom:1px solid var(--line)}
+.room-photo-placeholder span{font-family:var(--serif);font-size:1.3rem;color:var(--gold-soft)}
+.room-photo-placeholder small{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .room-body{padding:1.5rem}
 .room-body h3{margin-bottom:.4rem}
 .room-meta{color:var(--gold);font-size:.8rem;letter-spacing:.05em;margin-bottom:.8rem}
