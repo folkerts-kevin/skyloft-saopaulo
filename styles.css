@@ -147,6 +147,22 @@ h3{font-size:1.4rem}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding:1.4rem 24px;text-align:center}
 .footer-bottom p{color:var(--muted);font-size:.82rem}
 
+/* ---------- Blog ---------- */
+.container-narrow{max-width:760px}
+.blog-post h1{margin-bottom:1.4rem}
+.post-body p{color:var(--muted);margin-bottom:1.1rem;font-size:1.05rem;line-height:1.75}
+.post-body h2{color:var(--ink);font-size:1.5rem;margin:2rem 0 .8rem;font-family:var(--serif)}
+.post-body a{color:var(--gold-soft);text-decoration:underline;text-underline-offset:3px}
+.blog-cta{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:2rem;margin-top:2.5rem;text-align:center}
+.blog-cta h3{font-family:var(--serif);font-size:1.5rem;margin-bottom:.6rem}
+.blog-cta p{color:var(--muted);margin-bottom:1.3rem;max-width:52ch;margin-left:auto;margin-right:auto}
+.post-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.6rem}
+.post-card{display:block;background:var(--surface);border:1px solid rgba(255,255,255,.05);border-radius:var(--radius);padding:1.8rem;transition:transform .25s,border-color .25s}
+.post-card:hover{transform:translateY(-4px);border-color:var(--line)}
+.post-card h3{font-family:var(--serif);font-size:1.4rem;margin-bottom:.6rem;color:var(--ink)}
+.post-card p{color:var(--muted);font-size:.96rem;margin-bottom:1rem}
+.post-readmore{color:var(--gold);font-size:.85rem;letter-spacing:.05em}
+
 /* ---------- Floating WhatsApp button ---------- */
 .wa-float{position:fixed;right:22px;bottom:22px;z-index:200;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.4);transition:transform .2s ease,box-shadow .2s ease}
 .wa-float:hover{transform:scale(1.08);box-shadow:0 10px 26px rgba(0,0,0,.5)}
