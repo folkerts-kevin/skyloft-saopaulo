@@ -117,6 +117,7 @@ h3{font-size:1.4rem}
 .testimonial{background:var(--surface);border-radius:var(--radius);padding:2rem;border:1px solid rgba(255,255,255,.05)}
 .testimonial p{color:var(--ink);font-style:italic;font-size:1.02rem;margin-bottom:1.3rem}
 .testimonial footer{display:flex;flex-direction:column}
+.t-stars{color:var(--gold);letter-spacing:3px;margin-bottom:.6rem;font-size:.95rem}
 .t-name{font-weight:500;color:var(--gold-soft)}
 .t-city{font-size:.82rem;color:var(--muted)}
 
